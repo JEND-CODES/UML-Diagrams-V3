@@ -16,7 +16,7 @@
 
 ## Cas d'utilisation : Création de commande
 
-- Expliquer le choix du moyen de paiement : le rôle des acteurs secondaires (Bank, Restaurant) qui conditionnent les actions du Client
+- Expliquer le choix du moyen de paiement : le rôle des acteurs secondaires (Bank, Restaurant, Système de géolocalisation) qui conditionnent les actions du Client
 
 ![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Diagramme_Cr%C3%A9ation_Commande_V4.png)
 
@@ -56,7 +56,7 @@
 
 ## Modèle de données
 
-- Définition : Le modèle de données fournit la représentation finale de la base de données - Il précise ce qui va être créé dans la base de données ainsi que le type de champs créés pour chaque table.
+- Définition : Le modèle de données fournit la représentation finale de la base de données - Il précise ce qui va être créé dans la base de données ainsi que les types de champs créés pour chaque table.
 - Indications des clés primaires PK, et des clés secondaires FK
 - Indications des types de champs et des valeurs pour chaque table (INT, VARCHAR, DATETIME, TIME, DECIMAL)
 - NULL, NOT NULL : Si la colonne n'est pas nullable, elle est notée NOT NULL dans le MPD - Si la colonne accepte les NULL, on dit qu'elle est nullable. 
@@ -66,7 +66,7 @@
 - INT(11) peut stocker des valeurs négatives (si on n'a pas indiqué UNSIGNED) : les valeurs peuvent varier de -2 147 483 647 à 2 147 483 647 
 - TIME stocke l'heure sans la date / DATETIME stocke à la fois la date et l'heure
 
-- On peut effectuer le calcul du temps restant pour la livraison de commande : calcul effectué à partir de l'heure de prise en charge par le livreur (deliverer_start) et la date de la commande majorée de 30 minutes (on fait une soustraction pour obtenir le temps restant)
+- On peut effectuer le calcul du temps restant pour la livraison de commande : à partir de l'heure de prise en charge par le livreur (deliverer_start) et la date de la commande majorée de 30 minutes (on fait une soustraction pour obtenir le temps restant)
 
 
 ![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Mod%C3%A8le_de_Donn%C3%A9es_V5.png)
