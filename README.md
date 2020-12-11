@@ -34,7 +34,7 @@
 
 ## Concepteur SQL
 
-![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Concepteur_phpMyAdmin_BDD_V3.jpg)
+![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Concepteur_phpMyAdmin_BDD_V3.png)
 
 ## Base de données avec jeu de données
 
