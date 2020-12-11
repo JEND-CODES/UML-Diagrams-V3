@@ -10,7 +10,7 @@
 - Définition : Les diagrammes de cas d'utilisation (DCU) sont des diagrammes UML utilisés pour comprendre le fonctionnement global d'une application, modéliser les interactions entre des acteurs et des systèmes.
 - Les acteurs : l’acteur principal et les acteurs secondaires
 - Modèle de labels « include » ou « extend » / On appelle ça des « relations stéréotypées » 
-- Explication sur les conditions : le manager ne peut ajouter un plat qu’à condition où il soit authentifié : c’est pourquoi nous mentionnons que l’action de « Lister les plats » inclut -> « include » l’authentification – et cette même authentification « extends », est la conséquence d’une inscription préalable
+- Explication sur les conditions : le manager ne peut ajouter un plat uniquement si il est au préalable authentifié : c’est pourquoi nous mentionnons que l’action de « Lister les plats » inclut -> « include » l’authentification – et cette même authentification « extends », est la conséquence d’une inscription préalable
 
 ![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Diagramme_Ajout_Plat_Jour_V4.png)
 
