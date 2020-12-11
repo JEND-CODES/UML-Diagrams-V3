@@ -16,7 +16,7 @@
 
 ## Cas d'utilisation : Création de commande
 
-- Expliquer le choix du moyen de paiement - le rôle des acteurs secondaires (Bank / Restaurant) qui conditionnent les actions du Client
+- Expliquer le choix du moyen de paiement : le rôle des acteurs secondaires (Bank, Restaurant) qui conditionnent les actions du Client
 
 ![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Diagramme_Cr%C3%A9ation_Commande_V4.png)
 
