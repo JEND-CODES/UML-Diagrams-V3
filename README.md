@@ -2,14 +2,15 @@
 
 - Introduction : Rappel sur les attendus
 - Plan de présentation : Explications CAS / SEQUENCES / CLASSES / MODELES / BDD SQL
-- Objectifs : donner une vision globale du projet
-- Importance : Modéliser, c’est décrire de manière visuelle et graphique les besoins et, les solutions fonctionnelles et techniques de votre projet logiciel. Un logiciel qui a été réalisé sans analyse et sans conception (étapes où l’on modélise le futur logiciel) risque lui aussi de ne pas répondre aux besoins, de comporter des anomalies et d’être très difficile à maintenir.
+- Objectifs : donner une vision globale du projet / on parle d'une représentation graphique macroscopique d'un "domaine" pour communiquer avec un client sur le bon fonctionnement d'une application future.
+- Importance : Modéliser, c’est décrire de manière visuelle et graphique les besoins et, les solutions fonctionnelles et techniques de votre projet logiciel. Un logiciel qui a été réalisé sans analyse et sans conception (étapes où l’on modélise le futur logiciel) risque lui aussi de ne pas répondre aux besoins, de comporter des anomalies et d’être très difficile à maintenir. / Les diagrammes UML nous permettent d’illustrer ce que nous comprenons des besoins des utilisateurs. Il s'agit ensuite de s’assurer que la modélisation des besoins est bien conforme aux besoins réels des utilisateurs.
+- UML signifie Unified Modeling Language (langage unifié de modélisation). C'est un standard de notation que l'on peut utiliser pour modéliser ou représenter de manière visuelle une application informatique. 
 
 ## Cas d'utilisation : Ajout d'un plat du jour
 
-- Définition : Les diagrammes de cas d'utilisation (DCU) sont des diagrammes UML utilisés pour comprendre le fonctionnement global d'une application, modéliser les interactions entre des acteurs et des systèmes.
-- Les acteurs : l’acteur principal et les acteurs secondaires
-- Modèle de labels « include » ou « extend » / On appelle ça des « relations stéréotypées » 
+- Définition : Les diagrammes de cas d'utilisation (DCU) sont des diagrammes UML utilisés pour comprendre le fonctionnement global d'une application, modéliser les interactions entre des acteurs et des systèmes. Les diagrammes de cas d’utilisation permettent de représenter visuellement les objectifs des utilisateurs. Ils montrent les relations entre les acteurs et les cas d’utilisation, entre acteurs et acteurs, et enfin entre différents cas d’utilisation.
+- Les acteurs : l’acteur principal et les acteurs secondaires - Le système est utilisé par des acteurs principaux, et parfois, il peut être lié à des acteurs secondaires. Les acteurs secondaires échangent des informations avec le système, mais ne déclenchent aucune des fonctionnalités.
+- Modèle de labels « include » ou « extend » / On appelle ça des « relations stéréotypées » / Une relation « include » est utilisée pour indiquer que le cas d’utilisation source (départ de la flèche) contient TOUJOURS le cas d’utilisation inclus. Une relation « include » permet d’indiquer qu’un cas d’utilisation a toujours besoin du cas d’utilisation lié. / Une relation « extend » est ici utilisée pour indiquer que le cas d’utilisation source (à l’origine de la flèche) est nécessaire au cas d’utilisation principal. Une relation « extend » c’est une relation qui est soumise à une condition. Le cas d’utilisation initial n’utilisera les actions du cas d’utilisation lié que dans certaines circonstances. On doit toujours expliciter la condition qui doit être rencontrée pour que le cas d’utilisation lié soit utile.
 - Explication sur les conditions : le manager ne peut ajouter un plat uniquement si il est au préalable authentifié : c’est pourquoi nous mentionnons que l’action de « Lister les plats » inclut -> « include » l’authentification – et cette même authentification « extends », est la conséquence d’une inscription préalable
 
 ![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Diagramme_Ajout_Plat_Jour_V4.png)
@@ -57,10 +58,10 @@
 ## Modèle de données
 
 - Définition : Le modèle de données fournit la représentation finale de la base de données - Il précise ce qui va être créé dans la base de données ainsi que les types de champs créés pour chaque table.
-- Indications des clés primaires PK, et des clés secondaires FK
+- Modèle relationnel - La classe d'association choisie : une association un à plusieurs (one-to-many) 
+- Indications des clés primaires PK, et des clés secondaires FK / La clé primaire (PK) sert d'identifiant aux données enregistrées / La valeur de la clé étrangère est la valeur d'une clé primaire liée d'une table à une autre. 
 - Indications des types de champs et des valeurs pour chaque table (INT, VARCHAR, DATETIME, TIME, DECIMAL)
 - NULL, NOT NULL : Si la colonne n'est pas nullable, elle est notée NOT NULL dans le MPD - Si la colonne accepte les NULL, on dit qu'elle est nullable. 
-- Colonne en « auto incrément » : Le principe de l'auto incrément d'une colonne est d'affecter une valeur numérique incrémentée (généralement de 1) à chaque nouvel ajout de ligne dans la table. 
 - Les nombres décimaux :  DECIMAL(p,s) : p (precision) : le nombre total de chiffres dans le nombre, s (scale) : le nombre de chiffres après la virgule
 - DECIMAL (4,2) utilisé pour stocker les prix des plats et des desserts. Cela signifie que le chiffre total sera de 4 caractères max et que deux chiffres max seront après la virgule décimale.
 - INT(11) peut stocker des valeurs négatives (si on n'a pas indiqué UNSIGNED) : les valeurs peuvent varier de -2 147 483 647 à 2 147 483 647 
@@ -73,9 +74,16 @@
 
 ## Concepteur SQL
 
+- Environnement de développement : SQL / phpMyAdmin (exemples de créations de tables, de colonnes, de valeurs, de clés..)
+- Expliquer les choix des types de données pour chaque colonne (Nombre, Texte, Date, Temps, Prix..)
+- Colonne ID PK 11 en « auto incrément » : Le principe de l'auto incrément d'une colonne est d'affecter une valeur numérique incrémentée (généralement de 1) à chaque nouvel ajout de ligne dans la table.
+- Expliquer les relations des clés étrangères. L'impossibilité de modifier une table liée par une clé étrangère (sauf en mentionnant une autorisation spécifique)
+
 ![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Concepteur_phpMyAdmin_BDD_V3.png)
 
 ## Base de données avec jeu de données
+
+- Parcourir quelques jeux de données pour voir apparaître les relations entre les tables, la récupération de données par exemple à l'aide des clés étrangères.
 
 Consultable ici : https://github.com/JEND-CODES/UML-Diagrams-V3/blob/master/restaurant_v5.sql
 
