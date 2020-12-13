@@ -29,7 +29,7 @@
 
 - Définition : Les diagrammes de séquences sont la représentation graphique des interactions entre les acteurs et le système selon un ordre chronologique (dans la formulation Unified Modeling Language).
 
-![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/S%C3%A9quence_Ajout_Plat_du_jour_V1.png)
+![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/S%C3%A9quence_Ajout_Plat_du_jour_V2.png)
 
 ## Séquence : Création d'une commande
 
@@ -53,7 +53,7 @@
 
 - Dans la table « order_detail », le title va être une copie du titre du plat et du dessert, c’est fait pour conserver l’historique des plats créés chaque jour.
 
-![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Diagramme_de_Classes_V7.png)
+![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Diagramme_de_Classes_V8.png)
 
 ## Modèle de données
 
@@ -70,7 +70,7 @@
 - On peut effectuer le calcul du temps restant pour la livraison de commande : à partir de l'heure de prise en charge par le livreur (deliverer_start) et la date de la commande majorée de 30 minutes (on fait une soustraction pour obtenir le temps restant)
 
 
-![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Mod%C3%A8le_de_Donn%C3%A9es_V5.png)
+![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Mod%C3%A8le_de_Donn%C3%A9es_V6.png)
 
 ## Concepteur SQL
 
@@ -79,13 +79,13 @@
 - Colonne ID PK 11 en « auto incrément » : Le principe de l'auto incrément d'une colonne est d'affecter une valeur numérique incrémentée (généralement de 1) à chaque nouvel ajout de ligne dans la table.
 - Expliquer les relations des clés étrangères. L'impossibilité de modifier une table liée par une clé étrangère (sauf en mentionnant une autorisation spécifique)
 
-![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Concepteur_phpMyAdmin_BDD_V3.png)
+![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Concepteur_phpMyAdmin_BDD_V4.png)
 
 ## Base de données avec jeu de données
 
 - Parcourir quelques jeux de données pour voir apparaître les relations entre les tables, la récupération de données par exemple à l'aide des clés étrangères.
 
-Consultable ici : https://github.com/JEND-CODES/UML-Diagrams-V3/blob/master/restaurant_v5.sql
+Consultable ici : https://github.com/JEND-CODES/UML-Diagrams-V3/blob/master/restaurant_v6.sql
 
 
 
