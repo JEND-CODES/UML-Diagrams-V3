@@ -79,7 +79,7 @@
 - Colonne ID PK 11 en « auto incrément » : Le principe de l'auto incrément d'une colonne est d'affecter une valeur numérique incrémentée (généralement de 1) à chaque nouvel ajout de ligne dans la table.
 - Expliquer les relations des clés étrangères. L'impossibilité de modifier une table liée par une clé étrangère (sauf en mentionnant une autorisation spécifique)
 
-![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Concepteur_phpMyAdmin_BDD_V5.png)
+![RESTO](https://raw.githubusercontent.com/JEND-CODES/UML-Diagrams-V3/master/Concepteur_phpMyAdmin_BDD_V5.JPG)
 
 ## Base de données avec jeu de données
 
